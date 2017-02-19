@@ -12,16 +12,16 @@ public class Task2 {
 	public static void main(String[] args){
 		List<Record> records = new ArrayList<Record>();
 		RecordBook book;
-		
-		
 		String lastName = "Holms";
 		String firstName = "Kate";
 		
+		book = new RecordBook("Book 1",records);
+		
 		//Add records
-		records.add(new Record("Holms","Sherlock",new Date("1991/12/29"),"123456"));
-		records.add(new Record("Watson","John",new Date("1978/02/06"),"898392"));
-		records.add(new Record("Holms","Kate",new Date("1980/10/07"),"345456456"));
-		records.add(new Record("Parker","Peter",new Date("1970/11/20"),"4234"));
+		book.addRec("Holms","Sherlock",new Date("1991/12/29"),"123456");
+		book.addRec("Watson","John",new Date("1978/02/06"),"898392");
+		book.addRec("Holms","Kate",new Date("1980/10/07"),"345456456");
+		book.addRec("Parker","Peter",new Date("1970/11/20"),"4234");
 		
 		book = new RecordBook("Book 1",records);
 		

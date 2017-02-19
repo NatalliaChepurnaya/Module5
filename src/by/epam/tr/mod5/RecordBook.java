@@ -37,6 +37,8 @@ public class RecordBook {
 		this.recBook = recBook;
 	}
 	
+	
+	
 	public Record search(String lastName, String firstName){
 		for (Record rec : this.getRecBook()){
 			if(lastName.equals(rec.getLastName()) == true &&
@@ -66,6 +68,11 @@ public class RecordBook {
 			} 							
 		}
 		return null;
+	}
+	
+	public void addRec(String _lastName, String _firstName, Date _date, String _phone){
+		Record rec = new Record(_lastName,_firstName,_date,_phone);
+		recBook.add(rec);
 	}
 	
 	public void removeRecord(String lastName, String firstName){
