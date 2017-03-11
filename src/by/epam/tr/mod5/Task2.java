@@ -2,7 +2,7 @@ package by.epam.tr.mod5;
 
 import by.epam.tr.mod5.Record;
 import by.epam.tr.mod5.RecordBook;
-
+import java.util.Comparator;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -14,7 +14,8 @@ public class Task2 {
 		RecordBook book;
 		String lastName = "Holms";
 		String firstName = "Kate";
-		
+		Comparator<Record> dateComparator = new RecordByDateComparator();
+		Comparator<Record> nameComparator = new RecordByNameComparator();
 		book = new RecordBook("Book 1",records);
 		
 		//Add records
@@ -36,13 +37,13 @@ public class Task2 {
 		book.printBook();
 		
 		//Sorted by date
-		book.sortByDate();
+		book.getRecBook().sort(dateComparator);
 		System.out.println("Sorted by date of birth:");
 		book.printBook();
 		
-		//Sorted by date
-		book.sortByLastName();
-		System.out.println("Sorted by last name:");
+		//Sorted by name
+		book.getRecBook().sort(nameComparator);
+		System.out.println("Sorted by name:");
 		book.printBook();
 			
 		

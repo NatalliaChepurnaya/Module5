@@ -1,10 +1,7 @@
 package by.epam.tr.mod5;
 
-import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
-import java.util.Collections;
-
 import by.epam.tr.mod5.Record;
 
 public class RecordBook {
@@ -81,23 +78,6 @@ public class RecordBook {
 		
 	}
 	
-	public void sortByDate(){
-		Collections.sort(recBook, new Comparator<Record>(){
-			public int compare(Record rec1, Record rec2){
-				return rec1.getDateOfBirth().compareTo(rec2.getDateOfBirth());
-			}
-		});
-	}
-	
-		
-	public void sortByLastName(){
-		Collections.sort(recBook, new Comparator<Record>(){
-			public int compare(Record rec1, Record rec2){
-				return rec1.getLastName().compareTo(rec2.getLastName());
-			}
-		});
-	}
-	
 	public void printBook(){
 		for (Record rec : recBook){
 			System.out.println(rec.toString());
@@ -105,3 +85,4 @@ public class RecordBook {
 		System.out.println();		
 	}
 }
+
