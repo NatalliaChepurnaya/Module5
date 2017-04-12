@@ -40,7 +40,8 @@ public class RecordBook {
 		for (Record rec : this.getRecBook()){
 			if(lastName.equals(rec.getLastName()) == true &&
 					firstName.equals(rec.getFirstName())){
-				System.out.println(rec.toString());
+				System.out.println(rec.toString());// это вывод лишний и должен быть не в этом коде
+				// это код просто ищет запись, он не должен ее выводить
 				return rec;
 			}
 		}
